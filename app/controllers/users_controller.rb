@@ -39,6 +39,7 @@ class UsersController < ApplicationController
     @net = @gross - @deduction
     @salary_per_month = @net
     @salary_per_annum = @salary_per_month * 12
+    @sal.basic, @sal.hra, @sal.cca, @sal.sa, @sal.ta, @sal.reim, @sal.lop, @sal.od = nil?(@sal.basic, @sal.hra, @sal.cca, @sal.sa, @sal.ta, @sal.reim, @sal.lop, @sal.od)
 
   end
 
@@ -115,6 +116,14 @@ class UsersController < ApplicationController
   def lopc(basic, lop)
     l = (@sal.basic/30) * lop
     return l
+  end
+
+  def nil?(*args)
+    for i in args
+      if i == nil
+        i = 0
+      end
+    end
   end
 end
 

@@ -10,7 +10,7 @@
       <td colspan="4"><label><h4><b>ADDITIONS</b></h4></label></td>
   </tr>
   <td><%= f.label "Basic Pay "%><font color="red">*</font></td>
-    <td><%= f.number_field :basic, :required => true, :min => 0 %> 
+    <td><%= f.number_field :basic, :required => true, :min => 0, :placeholder => 0 %> 
     <td><%= f.label "HRA (in %) "%><font color="red">*</font></td>
     <td><%= f.number_field :hra, :required => true, :min => 0%>
   </tr>
@@ -24,7 +24,7 @@
     <td><%= f.label "Transport Allowance "%></td>
     <td><%= f.number_field :ta, :min => 0 %> 
     <td><%= f.label "Reimbursement "%></td>
-    <td><%= f.number_field :reim, :min => 0%>
+    <td><%= f.number_field :reim, :min => 0 %>
   </tr>
     <tr>
       <td colspan="4"><label><h4><b>DEDUCTIONS</b></h4></label></td>
@@ -33,7 +33,7 @@
     <td><%= f.label "Leaves in a month"%></td>
     <td><%= f.number_field :lop, :min => 0 %> 
     <td><%= f.label "Other Deductions "%></td>
-    <td><%= f.number_field :od, :min => 0%>
+    <td><%= f.number_field :od, {:min => 0}%>
   </tr>
 </table>
 <br>
