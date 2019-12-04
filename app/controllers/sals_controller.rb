@@ -9,6 +9,7 @@ class SalsController < ApplicationController
 		@error
     @sal = Sal.new(sal_params)
     @sal.id = session[:user_id]
+    @user = User.find(session[:user_id])
     if @sal.save
       redirect_to user_path(session[:user_id])
     else

@@ -9,22 +9,28 @@
     <tr>
       <td colspan="4"><label><h4><b>ADDITIONS</b></h4></label></td>
   </tr>
-  <td><%= f.label "Basic Pay "%><font color="red">*</font></td>
-    <td><%= f.number_field :basic, :required => true, :min => 0, :placeholder => 0 %> 
-    <td><%= f.label "HRA (in %) "%><font color="red">*</font></td>
+  <td><%= f.label "Basic Pay "%></td>
+    <td><%= f.number_field :basic, :required => true, :min => 0 %> 
+    <span style="color:black;"><%= @sal.errors[:basic][0] rescue nil%></span>
+    <td><%= f.label "HRA (in %) "%></td>
     <td><%= f.number_field :hra, :required => true, :min => 0%>
+    <span style="color:black;"><%= @sal.errors[:hra][0] rescue nil%></span>
   </tr>
   <tr>
-    <td><%= f.label "CCA (in %) "%><font color="red">*</font></td>
+    <td><%= f.label "CCA (in %) "%></td>
     <td><%= f.number_field :cca, :required => true, :min => 0%> 
+     <span style="color:black;"><%= @sal.errors[:cca][0] rescue nil%></span>
     <td><%= f.label "Special Allowance"%></td>
     <td><%= f.number_field :sa, :min => 0%>
+   <span style="color:black;"><%= @sal.errors[:sa][0] rescue nil%></span>
   </tr>
   <tr>
     <td><%= f.label "Transport Allowance "%></td>
     <td><%= f.number_field :ta, :min => 0 %> 
+       <span style="color:black;"><%= @sal.errors[:ta][0] rescue nil%></span>
     <td><%= f.label "Reimbursement "%></td>
     <td><%= f.number_field :reim, :min => 0 %>
+       <span style="color:black;"><%= @sal.errors[:reim][0] rescue nil%></span>
   </tr>
     <tr>
       <td colspan="4"><label><h4><b>DEDUCTIONS</b></h4></label></td>
@@ -32,8 +38,10 @@
   <tr>
     <td><%= f.label "Leaves in a month"%></td>
     <td><%= f.number_field :lop, :min => 0 %> 
+       <span style="color:black;"><%= @sal.errors[:lop][0] rescue nil%></span>
     <td><%= f.label "Other Deductions "%></td>
     <td><%= f.number_field :od, {:min => 0}%>
+       <span style="color:black;"><%sal.errors[:od][0] rescue nil%></span>
   </tr>
 </table>
 <br>
