@@ -1,0 +1,2 @@
+class Sal < ApplicationRecord
+end

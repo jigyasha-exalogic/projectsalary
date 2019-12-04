@@ -1,0 +1,42 @@
+
+<%= form_for @sal do |f|%>
+<fieldset style="margin-left: 400px; margin-right: 300px; border: 0px;">
+<table align = center, width=125%>
+<td colspan="2"><label><h3>Employee Name: <%= @user.fname %> <%= @user.lname %></h3></label></td>
+  <tr>
+      <td colspan="4"><label><h3><b>SALARY DETAILS</b></h3></label></td>
+    </tr>
+    <tr>
+      <td colspan="4"><label><h4><b>ADDITIONS</b></h4></label></td>
+  </tr>
+  <td><%= f.label "Basic Pay "%><font color="red">*</font></td>
+    <td><%= f.number_field :basic, :required => true, :min => 0 %> 
+    <td><%= f.label "HRA (in %) "%><font color="red">*</font></td>
+    <td><%= f.number_field :hra, :required => true, :min => 0%>
+  </tr>
+  <tr>
+    <td><%= f.label "CCA (in %) "%><font color="red">*</font></td>
+    <td><%= f.number_field :cca, :required => true, :min => 0%> 
+    <td><%= f.label "Special Allowance"%></td>
+    <td><%= f.number_field :sa, :min => 0%>
+  </tr>
+  <tr>
+    <td><%= f.label "Transport Allowance "%></td>
+    <td><%= f.number_field :ta, :min => 0 %> 
+    <td><%= f.label "Reimbursement "%></td>
+    <td><%= f.number_field :reim, :min => 0%>
+  </tr>
+    <tr>
+      <td colspan="4"><label><h4><b>DEDUCTIONS</b></h4></label></td>
+  </tr>
+  <tr>
+    <td><%= f.label "Leaves in a month"%></td>
+    <td><%= f.number_field :lop, :min => 0 %> 
+    <td><%= f.label "Other Deductions "%></td>
+    <td><%= f.number_field :od, :min => 0%>
+  </tr>
+</table>
+<br>
+<%= f.submit 'Submit', :class => "links"%>
+</fieldset>
+<% end %>
