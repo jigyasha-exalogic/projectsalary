@@ -1,5 +1,6 @@
 class SalsController < ApplicationController
-	def new
+	 before_action :admin?
+  def new
 		@sal=Sal.new
 		@user = User.find(session[:user_id])
 	end
@@ -34,5 +35,11 @@ class SalsController < ApplicationController
 
   def sal_params
     params.require(:sal).permit(:basic, :hra, :cca, :sa, :ta, :reim, :it, :pt, :lop, :od, :userid)
+  end
+
+   def admin?
+    unless session[:user_type]=="admin"
+      redirect_to root_path
+    end
   end
 end
