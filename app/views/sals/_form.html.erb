@@ -37,7 +37,7 @@
     <td><%= f.number_field :lop, :min => 0 %> 
        <span style="color:black;"><%= @sal.errors[:lop][0] rescue nil%></span>
     <td><%= f.label "Other Deductions "%></td>
-    <td><%= f.number_field :od, {:min => 0}%>
+    <td><%= f.number_field :od, :min => 0, :required => true%>
        <span style="color:black;"><%sal.errors[:od][0] rescue nil%></span>
   </tr>
 </table>
