@@ -14,9 +14,9 @@
 <div class="main1">
   <h3>Employee List</h3>
   <h5>Number of Employees : <%= @users.count-1 %> </h5>
-<% @users.each do |f| %>
-  <% unless f.role == "admin"%>
-    <a href="#" style="text-decoration:none; color:black;">
+  <% @users.each do |f| %>
+      <% unless f.role == "admin"%>
+    <a href="<%= user_path(f) %>" style="text-decoration:none; color:black;">
       <div class="container">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIqtC7K9hXXGa821c0OkwppyASRCjHj_Pubh9ScF5v9XVC8acGhQ&s" alt="Avatar" style="width:120px">
         <p><%= f.fname %>&nbsp;<%= f.lname %><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Email:</label>&nbsp;<%= f.email %></span></p>

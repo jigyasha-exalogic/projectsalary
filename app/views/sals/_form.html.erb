@@ -1,6 +1,11 @@
 
 <%= form_for @sal do |f|%>
+<%= hidden_field(:sal, :id, :value => session[:user_id]) %>
+
 <fieldset style="margin-left: 400px; margin-right: 300px; border: 0px;">
+  <% if @sal.errors[:id][0] != nil %>
+  User already created.
+  <% end %>
 <table align = center, width=125%>
 <td colspan="2"><label><h3>Employee Name: <%= @user.fname %> <%= @user.lname %></h3></label></td>
     <tr>
@@ -42,6 +47,7 @@
   </tr>
 </table>
 <br>
+<%= link_to 'Back to Home', "/users" , :class => "links"%> &nbsp;&nbsp;
 <%= f.submit 'Submit', :class => "links"%>
 </fieldset>
 <% end %>

@@ -1,5 +1,8 @@
 class SalsController < ApplicationController
 	 before_action :admin?
+   def index
+    redirect_to '/users'
+   end
   def new
 		@sal=Sal.new
 		@user = User.find(session[:user_id])
@@ -13,7 +16,7 @@ class SalsController < ApplicationController
     if @sal.save
       redirect_to user_path(session[:user_id])
     else
-     	@error = "Please check the data"
+     	@error = "jih"
       render 'new'
     end
 	end

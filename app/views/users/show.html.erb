@@ -155,8 +155,8 @@
 <br>
 <br>
 <% if session[:user_type]=='admin'%>
-	<%= link_to 'Edit', edit_user_path(@user), :class => "links" %>
-	<%= link_to 'Back', users_path, :class => "links" %>
+	<%= link_to 'Back to Home', users_path, :class => "links" %>&nbsp;&nbsp;
+	<%= link_to 'Edit', edit_user_path(@user), :class => "links" %> 
 <% end %>
 </body>
 </fieldset>

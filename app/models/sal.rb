@@ -7,4 +7,5 @@ class Sal < ApplicationRecord
   	validates :reim, :presence => true
   	validates :lop, :presence => true
   	validates :od, :presence => true
+  	 validates :id, :presence => true, :uniqueness => true
 end
