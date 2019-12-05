@@ -1,6 +1,6 @@
 body {
   font-family: "Lato", sans-serif;
-  background: #F3F4E3;
+  background:   #dfe3ee;
 }
 
 .sidenav {
@@ -10,7 +10,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background: linear-gradient(to left, #C7C6BA, #C7C7C3);
+  background: #3b5998;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -19,7 +19,7 @@ body {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #616161;
+  color: white;
   display: block;
 }
 
@@ -81,9 +81,9 @@ body {
 .links{
        text-decoration: none;
        border-radius: 5em;
-       background: linear-gradient(to right, #4E3BEC, #8174E7);
+       background: #c0c5ce;
        border: none;
-       color: white;
+       color: black;
        padding: 15px 32px;
        text-align: center;
        text-decoration: none;
@@ -91,5 +91,13 @@ body {
        font-size: 13px;
        font-family: 'Ubuntu', sans-serif;
        cursor: pointer;
+       line-height: 15px; 
+       font-size: 13px;
 }
 
+.links:hover{
+  color: ;
+  font-size: 17px;
+  line-height: 15px;
+  position: relative;
+}
