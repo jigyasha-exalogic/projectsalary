@@ -38,7 +38,7 @@ class UsersController < ApplicationController
     end
     @net = @gross - @deduction
     @salary_per_month = @net
-    @salary_per_annum = @salary_per_month * 12
+    @salary_per_annum = @gross * 12
    # @sal.basic, @sal.hra, @sal.cca, @sal.sa, @sal.ta, @sal.reim, @sal.lop, @sal.od = nil?(@sal.basic, @sal.hra, @sal.cca, @sal.sa, @sal.ta, @sal.reim, @sal.lop, @sal.od)
 
   end
