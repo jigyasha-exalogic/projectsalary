@@ -1,5 +1,5 @@
 body {
-        background: linear-gradient(to right, #D4C0AB, #F2EFE5);
+        background: #dfe3ee;
         font-family: 'Ubuntu', sans-serif;
     }
 
@@ -14,7 +14,7 @@ body {
 
 .sign {
         padding-top: 40px;
-        color: #1E0BB6;
+        color: #305B95;
         font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
         font-size: 23px;
@@ -73,8 +73,7 @@ form.form1 {
 .submit {
         cursor: pointer;
         border-radius: 5em;
-        color: #fff;
-        background: linear-gradient(to right, #4E3BEC, #8174E7);
+        background: #c0c5ce;
         border: 0;
         padding-left: 40px;
         padding-right: 40px;
@@ -84,8 +83,14 @@ form.form1 {
         margin-left: 35%;
         font-size: 13px;
         box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+        color: black;
     }
 
+.submit:hover{
+  font-size: 17px;
+  line-height: 15px;
+  position: relative;
+}
 a {
         text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
         color: #E1BEE7;
@@ -96,25 +101,3 @@ a {
         .main {
             border-radius: 0px;
         }
-
-.alert {
-          padding: 20px;
-          background-color: #f44336; /* Red */
-          color: white;
-          margin-bottom: 15px;
-        }
-
-.closebtn {
-          margin-left: 15px;
-          color: white;
-          font-weight: bold;
-          float: right;
-          font-size: 22px;
-          line-height: 20px;
-          cursor: pointer;
-          transition: 0.3s;
-        }
-
-.closebtn:hover {
-          color: black;
-        }}
